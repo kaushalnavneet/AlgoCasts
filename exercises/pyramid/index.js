@@ -14,22 +14,6 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {
-  // It's important to draw the matrix for n upto 3 or 4
-  // To conclude the number of columns and to decide on the condition 
-  // for adding '#' or ' ' on each cell
-  for (let row=0; row<n; row++) {
-    let level = '';
-    for (let col=0; col<2*n-1; col++) {
-      const midpoint = n-1
-      if (midpoint-row <= col && col <= midpoint+row) {
-        level += '#';
-      } else {
-        level += ' ';
-      }
-    }
-    console.log(level)
-  }
-}
+function pyramid(n) {}
 
 module.exports = pyramid;

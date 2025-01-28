@@ -11,32 +11,6 @@
 //    list.insertLast('d');
 //    fromLast(list, 2).data // 'b'
 
-function fromLast(list, n) {
-  let slow = list.head;
-  let fast = list.head;
-
-  // Advance 'fast' by n spaces in the beginning it self
-  for (let i=0; i<n; i++) {
-    fast = fast.next;
-  }
-  /*
-  // or we could use a while loop
-  while (n < 0) {
-    fast = fast.next;
-    n--;
-  }
-  */
-
-  // Now we have a gap of n spaces between slow and fast
-  // Now keep increasing slow and fast by 1 until fast reaches at the last node i.e. fast.next is null
-  // then slow will be the node n spaces behind from the last
-
-  while (fast.next) {
-    slow = slow.next;
-    fast = fast.next;
-  }
-  return slow;
-
-}
+function fromLast(list, n) {}
 
 module.exports = fromLast;

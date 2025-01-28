@@ -14,40 +14,6 @@
 
 const Stack = require('./stack');
 
-class Queue {
-
-  constructor() {
-    this.stack1 = new Stack();
-    this.stack2 = new Stack();
-  }
-
-  add(record) {
-    this.stack1.push(record);
-  }
-
-  remove() {
-    while (this.stack1.peek()) {
-      this.stack2.push(this.stack1.pop())
-    }
-    const removedRecord = this.stack2.pop();
-    // Now fill the main stack again after removal for any next operation
-    while (this.stack2.peek()) {
-      this.stack1.push(this.stack2.pop());
-    }
-    return removedRecord;
-  }
-
-  peek() {
-    while (this.stack1.peek()) {
-      this.stack2.push(this.stack1.pop())
-    }
-    const lastRecord = this.stack2.peek();
-    while (this.stack2.peek()) {
-      this.stack1.push(this.stack2.pop());
-    }
-    return lastRecord;
-  }
-
-}
+class Queue {}
 
 module.exports = Queue;
