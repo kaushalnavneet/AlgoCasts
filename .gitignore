@@ -1,2 +1,3 @@
 .DS_Store
 exercises/node_modules/
+exercises/package-lock.json
